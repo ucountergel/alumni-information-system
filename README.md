@@ -19,8 +19,9 @@ Setting up to run the source codes:
 Admin credentials to login:
 
 username: admin
-
 password: admin123
+
+
 
 
 
