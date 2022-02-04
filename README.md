@@ -1,7 +1,12 @@
 # alumni-information-system
 Alumni Information System of Balay sa Alumni in CTU-AC
 
+Alumni's Home Page  [ http://localhost/alumni-information-system ]
 ![Capture](https://user-images.githubusercontent.com/55085932/152482930-c5374d22-10c4-4494-aee8-f620eb3f38cc.PNG)
+
+Admin's Login Page [ http://localhost/alumni-information-system/admin ]
+![Capture1](https://user-images.githubusercontent.com/55085932/152483179-7859d49d-af89-4285-850c-7430f267fd4d.PNG)
+
 
 Setting up to run the source codes:
 
