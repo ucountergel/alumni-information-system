@@ -1,6 +1,8 @@
 # alumni-information-system
 Alumni Information System of Balay sa Alumni in CTU-AC
 
+![Capture](https://user-images.githubusercontent.com/55085932/152482930-c5374d22-10c4-4494-aee8-f620eb3f38cc.PNG)
+
 Setting up to run the source codes:
 
 1. Download the source code in the G-drive and extract the zip file. Or clone the repository link of the system from GitHub using Git Bash using the command, ( git clone https://github.com/amnesiagel/alumni-information-system.git ).
@@ -20,3 +22,4 @@ username: admin ||
 password: admin123
 
 recommendations: can add forgot password feature to all the users (alumni and admin) if needed
+
