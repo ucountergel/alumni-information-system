@@ -10,7 +10,7 @@ Admin's Login Page -- [ http://localhost/alumni-information-system/admin ]
 
 Setting up to run the source codes:
 
-1. Download the source code above and extract the zip file. Or clone the repository link of the system from GitHub using Git Bash using the command, ( git clone https://github.com/amnesiagel/alumni-information-system.git ).
+1. Download the source code above and extract the zip file or clone the repository link of the system from GitHub using Git Bash using the command, ( git clone https://github.com/amnesiagel/alumni-information-system.git ).
 
 2. Download or install any local web server that runs PHP script such as Apache Xampp, which is used to test this system. Copy and paste the alumni-information-system folder to the location where your local web server have access to your local projects. Example in Xampp, go to your drive C, like this: ( C:\xampp\htdocs ).
 
