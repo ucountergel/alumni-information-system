@@ -19,4 +19,4 @@ Admin credentials to login:
 username: admin || 
 password: admin123
 
-recommendations: can add forgot password feature to all the users (alumni and admin)if needed
+recommendations: can add forgot password feature to all the users (alumni and admin) if needed
