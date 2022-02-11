@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2020 at 05:17 AM
+-- Generation Time: Feb 11, 2022 at 08:01 AM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,7 +47,8 @@ CREATE TABLE `alumnus_bio` (
 --
 
 INSERT INTO `alumnus_bio` (`id`, `firstname`, `middlename`, `lastname`, `gender`, `batch`, `course_id`, `email`, `connected_to`, `avatar`, `status`, `date_created`) VALUES
-(2, 'Mike', 'D', 'Williams', 'Male', 2009, 1, 'mwilliams@sample.com', 'My Company', '1602730260_avatar.jpg', 1, '2020-10-15');
+(3, 'Kim', 'Sartagoda', 'Calledo', 'Female', 2021, 1, 'kim@gmail.com', '', '1636963440_kim.jpg', 1, '2021-11-15'),
+(4, 'Darren', 'Dayanan', 'Teoganco', 'Female', 2022, 1, 'darren@gmail.com', '', '1644561840_darren.jpg', 1, '2022-02-11');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,8 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`id`, `course`, `about`) VALUES
-(1, 'BS Information Technology', 'Sample');
+(1, 'BS Information Technology', 'Sample'),
+(3, 'BSHM', '');
 
 -- --------------------------------------------------------
 
@@ -175,8 +177,6 @@ CREATE TABLE `forum_topics` (
 --
 
 INSERT INTO `forum_topics` (`id`, `title`, `description`, `user_id`, `date_created`) VALUES
-(2, 'Sample Topic 2', '&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; text-align: justify;&quot;&gt;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;&lt;/span&gt;', 3, '2020-10-15 15:20:51'),
-(3, 'Sample Topic 3', '&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; text-align: justify;&quot;&gt;Vivamus gravida nunc orci. Proin ut tristique odio. Nulla suscipit ipsum arcu, a luctus lorem vulputate et. Maecenas magna lorem, tempor id ultrices id, vehicula eu diam. Aliquam erat volutpat. Praesent in sem tincidunt, mattis odio nec, ultrices justo. Vivamus sit amet sapien ornare tortor porttitor congue vel et lorem. In interdum eget metus ut sagittis. In accumsan nec purus vel ornare. Quisque non scelerisque libero, et aliquam risus. Mauris tincidunt ullamcorper efficitur. Nullam venenatis in massa et elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In mollis, tortor sed pellentesque ultrices, sem sem interdum lectus, a laoreet nulla lacus at risus. Ut placerat orci at enim fermentum, eget pretium ante pharetra. Nam id nunc congue augue feugiat egestas.&lt;/span&gt;', 3, '2020-10-15 15:22:30'),
 (4, 'Topic by Admin', '&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; font-weight: bolder; margin: 0px; padding: 0px; text-align: justify;&quot;&gt;Lorem Ipsum&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; text-align: justify;&quot;&gt;&amp;nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/span&gt;', 1, '2020-10-16 08:31:45');
 
 -- --------------------------------------------------------
@@ -196,11 +196,10 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `about`, `created`) VALUES
-(1, 'Samplee', '2020-10-15 13:08:27'),
-(2, 'asdasd', '2020-10-15 13:15:37'),
-(3, 'asdasdrtgfdg', '2020-10-15 13:15:45'),
-(4, 'dfgdfgdfg', '2020-10-15 13:15:53'),
-(5, 'dfgdfgdfg', '2020-10-15 13:16:07');
+(1, 'CTU-AC Front Gate', '2020-10-15 13:08:27'),
+(6, 'Balay Sa Alumni', '2021-11-15 22:19:17'),
+(7, 'Officials', '2021-11-15 22:19:32'),
+(8, 'Logo', '2021-11-15 22:23:57');
 
 -- --------------------------------------------------------
 
@@ -222,7 +221,7 @@ CREATE TABLE `system_settings` (
 --
 
 INSERT INTO `system_settings` (`id`, `name`, `email`, `contact`, `cover_img`, `about_content`) VALUES
-(1, 'Alumni Management System', 'info@sample.comm', '+6948 8542 623', '1602738120_pngtree-purple-hd-business-banner-image_5493.jpg', '&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; font-weight: 400; text-align: justify;&quot;&gt;&amp;nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;');
+(1, 'Alumni Information System', 'alumni@gmail.com', '+63 932 345 8667', '1642576200_BalaySaAlumni1.jpg', '&lt;h4 style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;b style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;This is the website of CTU Argao Campus&amp;#x2019; Alumni Association, Inc. This is duly approved by the Securities and Exchange Commission in accordance with the Revised Corporation Code of the Philippines (Republic Act No. 11232) which took effect on February 23, 2019, and copies of Said Articles and By-Laws are hereto attached.&lt;/b&gt;&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -246,7 +245,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `type`, `auto_generated_pass`, `alumnus_id`) VALUES
 (1, 'Admin', 'admin', '0192023a7bbd73250516f069df18b500', 1, '', 0),
-(3, 'Mike Williams', 'mwilliams@sample.com', '3cc93e9a6741d8b40460457139cf8ced', 3, '', 2);
+(4, 'Kim Calledo', 'kim@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 3, '', 3),
+(5, 'Darren Teoganco', 'darren@gmail.com', '58b4e38f66bcdb546380845d6af27187', 3, '', 4);
 
 --
 -- Indexes for dumped tables
@@ -320,7 +320,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `alumnus_bio`
 --
 ALTER TABLE `alumnus_bio`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `careers`
@@ -332,13 +332,13 @@ ALTER TABLE `careers`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `event_commits`
@@ -362,7 +362,7 @@ ALTER TABLE `forum_topics`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `system_settings`
@@ -374,7 +374,7 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
