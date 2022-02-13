@@ -16,7 +16,7 @@ Setting up to run the source codes:
 
 3. Open your browser, access the web-server database by typing [ http://localhost/phpmyadmin ], create a new database, name it: alumni_db. Import the alumni_db.zip file located in the database folder of the alumni-information-system folder.
 
-4. Check your internet connection, since Login or Create account page for Alumni user won't appear. Finally, open a new tab in your browser, and type in the url tab to the location of the project:
+4. Turn on your internet connection, since Login or Create account page for Alumni user won't appear if not connected to the internet. Finally, open a new tab in your browser, and type in the url tab to the location of the project:
  [ http://localhost/alumni-information-system ] for the Alumni user; and
  [ http://localhost/alumni-information-system/admin ] to access the Admin user's dashboard.
 
