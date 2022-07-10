@@ -28,3 +28,5 @@ password: admin123
 
 recommendations: can add forgot password feature to all the users (alumni and admin) if needed
 
+#
+Based on the project of [sourcecodester](https://www.sourcecodester.com/php/14524/alumni-management-system-using-phpmysql-source-code.html)
